@@ -1,0 +1,71 @@
+Started GET "/repositories" for 127.0.0.1 at 2020-10-13 21:21:42 +0530
+Processing by RepositoriesController#index as HTML
+[1mRepositoriesController::IndexQuery QUERY (1512.8ms)[0m
+query RepositoriesController__IndexQuery {
+  search(query: "org:google", type: REPOSITORY, first: 100) {
+    edges {
+      node {
+        ... on Repository {
+          name
+          primaryLanguage {
+            name
+          }
+          createdAt
+        }
+      }
+    }
+  }
+}
+  Rendering repositories/index.html.erb
+  Rendered repositories/index.html.erb (4.9ms)
+Completed 200 OK in 1604ms (Views: 8.8ms)
+
+
+Started GET "/repositories.csv" for 127.0.0.1 at 2020-10-13 21:21:46 +0530
+Processing by RepositoriesController#index as CSV
+[1mRepositoriesController::IndexQuery QUERY (1563.4ms)[0m
+query RepositoriesController__IndexQuery {
+  search(query: "org:google", type: REPOSITORY, first: 100) {
+    edges {
+      node {
+        ... on Repository {
+          name
+          primaryLanguage {
+            name
+          }
+          createdAt
+        }
+      }
+    }
+  }
+}
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.1ms)
+Completed 200 OK in 1629ms (Views: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-13 21:56:13 +0530
+Started GET "/repositories" for 127.0.0.1 at 2020-10-13 21:56:13 +0530
+Processing by RepositoriesController#index as HTML
+[1mRepositoriesController::IndexQuery QUERY (1447.0ms)[0m
+query RepositoriesController__IndexQuery {
+  search(query: "org:google", type: REPOSITORY, first: 100) {
+    edges {
+      node {
+        ... on Repository {
+          name
+          primaryLanguage {
+            name
+          }
+          createdAt
+        }
+      }
+    }
+  }
+}
+  Rendering repositories/index.html.erb
+  Rendered repositories/index.html.erb (1.0ms)
+Completed 200 OK in 1514ms (Views: 3.6ms)
+
+

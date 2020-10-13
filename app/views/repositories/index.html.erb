@@ -1,0 +1,19 @@
+<h1>Google Github Repositories Statistics (First 100)</h1>
+
+<h2>Top 5 Languages Used:</h2>
+<ol>
+  <% @top_5.each do |language| %>
+    <li><%= language %></li>
+  <% end %>
+</ol>
+
+<h2>Least 5 Languages Used:</h2>
+<ol>
+  <% @least_5.each do |language| %>
+    <li><%= language %></li>
+  <% end %>
+</ol>
+<br />
+<span>
+  <%= link_to( 'Export CSV For All Repositories Data', repositories_path(format: "csv")) %>
+</span>
